@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f4acb7, #9d8189);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.todo {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.todo:hover {
+    transform: scale(1.02);
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #9d8189;
+    font-weight: bold;
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    border: 2px solid #f4acb7;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #9d8189;
+}
+
+button {
+    padding: 10px 20px;
+    background: #ff5945;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #e54c39;
+    transform: scale(1.05);
+}
+
+
+.text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.text ul li {
+    display: flex;
+    align-items: center;
+    background-color: rgba(161, 137, 181, 0.83);
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.text ul li input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+
+}
+.input{
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.text ul li span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.task-checkbox{
+    margin-right: 70px;
+}
+
+
+.task-completed {
+    text-decoration: line-through;
+    color: gray;
+}
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+
+    input {
+        margin: 0 0 6px 0;
+    }
+
+    .todo {
+        padding: 30px 20px;
+    }
+}
